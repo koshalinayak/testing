@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(31, 30, 30);
+    overflow-x: hidden;
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 6vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#video-container {
+    height: 60vh;
+    width: 100%;
+    background-color: rgb(31, 30, 30);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#video-container video {
+    width: 100%;
+    height: auto;
+    /* maintain aspect ratio */
+    object-fit: cover;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 6vw;
+}
+
+.nav p {
+    font-family: Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    font-style: oblique;
+
+}
+
+#logo {
+    font-style: oblique;
+    font-size: 22px;
+
+}
+
+.nav2 {
+    display: flex;
+    padding: 25px;
+    gap: 16px;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 8vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#curser {
+    height: 20px;
+    width: 20px;
+    background-color: rgba(185, 49, 18, 0.695);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1;
+}
+
+.textBox {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.textBox .text {
+    position: relative;
+    font-size: 8vw;
+    color: rgb(19, 129, 19);
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 10.4vw;
+    letter-spacing: 4px;
+    word-spacing: -3px;
+}
+
+.textBox .sec-text {
+    padding-left: 4px;
+    font-size: 8vw;
+
+}
+
+.textBox .first-text {
+    color: white;
+
+}
+
+.textBox .sec-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(31, 30, 30);
+
+    border-left: 2px solid rgb(19, 129, 19);
+    border-radius: 1px;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+
+    40%,
+    60% {
+        left: calc(100% + 4px);
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+
+.caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 4vw;
+    font-size: 0.8vw;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1.5px solid #000000;
+    font-weight: 500;
+}
